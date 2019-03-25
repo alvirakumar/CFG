@@ -9,10 +9,11 @@
 
 body {
     font-family: 'EB Garamond', serif;
-    font-size: 16px;
+    font-size: 0.9em;
     background-color: rgb(227, 231, 237);
     -webkit-font-smoothing: antialiased;
 }
+
 
 #homepage {
     background-image: url('images/homepage1.jpg');
@@ -35,6 +36,11 @@ body {
     width: 40px;
     margin-left: 20px;
 }
+
+.selection{
+
+}
+
 
 .center {
     position: absolute;
@@ -62,6 +68,7 @@ body {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
+    margin-top: 10%;
 }
 
 .scroll img {
@@ -78,30 +85,68 @@ body {
 }
 
 .china {
-    position: absolute;
-    top: 50%;
+    position:absolute;
+    top: 60%;
     left: 50%;
     transform: translate(-50%,-45%);
 }
 
-.china p {
-  font-family: 'EB Garamond', serif;
-  font-size: 0.1em;
-  color: white;
-  text-align: center;
-}
 .china img {
     width: 1000px;
 }
 
+.section p{
+  margin-bottom: 350px;
+  margin-left: 500px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.65em;
+  color: red;
+  cursor: pointer;
+  transition: text-indent 0.5s;
+  mix-blend-mode: multiply;
+}
+
+.section p:hover {
+    text-indent: 5px;
+    transition: text-indent 0.5s;
+}
+
+.section p:hover::before {
+    display: inline-block;
+    content: "✈︎";
+}
 
 .marker {
     position: absolute;
+
 }
 
 .marker.weihai { top: 338px; left: 752px; }
 .marker.beijing { top: 273px; left: 675px; }
 .marker.xian { top: 400px; left: 550px; }
+
+
+.marker.weihai:hover {
+ transform: scale(1.2);
+ -webkit-transform: scale(1.2);
+ -moz-transform: scale (1.2);
+ -o-transform: scale(1.2);
+}
+
+.marker.beijing:hover {
+ transform: scale(1.2);
+ -webkit-transform: scale(1.2);
+ -moz-transform: scale (1.2);
+ -o-transform: scale(1.2);
+}
+
+.marker.xian:hover {
+ transform: scale(1.2);
+ -webkit-transform: scale(1.2);
+ -moz-transform: scale (1.2);
+ -o-transform: scale(1.2);
+}
+
 
 .marker img {
     width: 50px;
@@ -128,6 +173,9 @@ body {
     margin-right: 10px;
   }
 
+.image:hover{
+  opacity: 0.5;
+}
 
 .image {
     display: inline-block;
@@ -135,7 +183,5 @@ body {
     height: 300px;
     background-size: cover;
     background-position: 50% 50%;
-}
-.grid hover {
-  colour: rgb(121, 153, 206);
+    transition: .5s ease;
 }
